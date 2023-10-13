@@ -1,1 +1,1 @@
-how can this be.. bested by this... this thing ! YOU INSIGNIFICANT FUCK ! THIS IS NOT OVER !
+WORK YOU WRETCHED MACHINE
