@@ -9,9 +9,14 @@
 int main(void)
 {
 int num;
+char chara;
 for (num = 0 ; num < 10 ; num++)
 {
 putchar(num + '0');
+}
+for (chara = 'a' ; chara <= 'g' ; chara++)
+{
+putchar(chara);
 }
 {
 putchar('\n');
