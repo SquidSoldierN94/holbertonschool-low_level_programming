@@ -17,7 +17,7 @@ if (num < 9)
 putchar(',');
 putchar(' ');
 }
-} 
+}
 {
 putchar('\n');
 }
