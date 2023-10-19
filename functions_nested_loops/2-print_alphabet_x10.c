@@ -1,21 +1,21 @@
 #include "main.h"
+
 /**
-*print_alphabet_x10 - Digits
+*print_alphabet_x10 - Make alphabet x10 times
 *
-*Return: Always 0 (Success)
+*Return: void
 */
 void print_alphabet_x10(void)
 {
-char chara;
-char ubebe;
-for (ubebe = 0; ubebe >= 10; ubebe++)
+char c;
+int i = 0;
+while (i <= 9)
 {
-for (chara = 'a'; chara <= 'z'; chara++)
+for (c = 'a'; c <= 'z'; c++)
 {
-_putchar(chara);
+_putchar(c);
 }
-{
 _putchar('\n');
-}
+i++;
 }
 }
