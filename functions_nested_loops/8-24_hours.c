@@ -1,9 +1,9 @@
 #include "main.h"
 /**
-*print_last_digit - Prints the last digit of a number
-*: The number to be treated
+*jack_bauer - Whos this guy
 *
-*Return: Value of the last digit of number
+*Return: ...
+*
 */
 void jack_bauer(void)
 {
@@ -24,7 +24,7 @@ _putchar(m1 + '0');
 _putchar(58);
 _putchar(s2 + '0');
 _putchar(s1 + '0');
-_putchar('\n')
+_putchar('\n');
 }
 }
 }
