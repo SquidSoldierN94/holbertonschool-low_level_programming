@@ -1,31 +1,28 @@
 #include "main.h"
 /**
-*jack_bauer - Whos this guy
+*jack_bauer - Prints every minute of the day of Jack Bauer
 *
 *Return: ...
-*
 */
 void jack_bauer(void)
 {
-int m2, m1, s2, s1;
+int a, b, c, d;
+for (a = 0; a <= 2; a++)
 {
-for (s1 = 0; s1 < 9; s1++)
+for (b = 0; b <= 9; b++)
 {
-for (s2 = 0; s2 < 9; s2++)
+if ((a <= 1 && b <= 9) || (a <= 2 && b <= 3))
 {
-for (m1 = 0; m1 < 3; m1++)
+for (c = 0; c <= 5; c++)
 {
-for (m2 = 0; m2 < 2; m2++)
+for (d = 0; d <= 9; d++)
 {
-if (m2 < 2 && m1 < 3)
-{
-_putchar(m2 + '0');
-_putchar(m1 + '0');
+_putchar(a + '0');
+_putchar(b + '0');
 _putchar(58);
-_putchar(s2 + '0');
-_putchar(s1 + '0');
+_putchar(c + '0');
+_putchar(d + '0');
 _putchar('\n');
-}
 }
 }
 }
