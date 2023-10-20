@@ -24,6 +24,7 @@ _putchar(m1 + '0');
 _putchar(58);
 _putchar(s2 + '0');
 _putchar(s1 + '0');
+_putchar('\n')
 }
 }
 }
