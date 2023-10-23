@@ -1,8 +1,9 @@
 #include "main.h"
 /**
-*print_alphabet - Digits
+*reset_to_98 - Updates the value it points to 98
+*@n: pointer to n
 *
-*Return: Always 0 (Success)
+*Return: void
 */
 void reset_to_98(int *n)
 {
