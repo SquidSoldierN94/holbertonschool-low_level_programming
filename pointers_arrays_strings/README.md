@@ -1,0 +1,1 @@
+SCPs are pretty great tbh. dr Bright even moreso
