@@ -7,7 +7,7 @@
 */
 void print_rev(char *s)
 {
-s = "I do not fear computers. I fear the lack of them - Isaac Asimov";
+s = "Holberton!";
 {
 for(; *s != '\0'; s++)
 {
