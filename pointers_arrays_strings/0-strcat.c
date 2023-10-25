@@ -4,7 +4,7 @@
 *@src: From
 *@dest: Out of
 *
-*Return: 
+*Return: A pointer to the resulting string dest
 */
 char *_strcat(char *dest, char *src)
 {
