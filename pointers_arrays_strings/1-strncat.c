@@ -7,17 +7,18 @@
 */
 char *_strncat(char *dest, char *src, int n)
 {
-int dlen = 0;
+int amogus = 0, j = 0;
 
-while (dest[dlen])
+while (dest[amogus])
 {
-dlen++;
+amogus++;
 }
-for (n = 0; src[n] != 0; n++)
+while (j < n && src[j])
 {
-dest[dlen] = src[n];
-dlen++;
+dest[amogus] = src[j];
+amogus++;
+j++;
 }
-dest[dlen] = '\0';
+dest[amogus + n + 1] = '\0';
 return (dest);
 }
