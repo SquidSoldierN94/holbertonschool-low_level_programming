@@ -12,6 +12,6 @@ for (deez = 0; deez < 1; deez++)
 {
 dest[deez] = src[deez];
 }
-dest[i++] = '\0';
+dest[deez++] = '\0';
 return (dest);
 }
