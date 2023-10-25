@@ -1,8 +1,8 @@
 #include "main.h"
 /**
-*_strcpy - Copies a string to a buffer i think
-*@src - She source of the string
-*@dest - Dhere the string is copied
+*_strcpy - Copy a string
+*@dest: Destination value
+*@src: Source value
 *
 */
 char *_strcpy(char *dest, char *src)
