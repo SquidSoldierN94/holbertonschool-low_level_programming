@@ -1,9 +1,11 @@
 #include "main.h"
 /**
-*_strncat - This fina do shit
+*_strncat - Conitnue as asked
 *@dest: Destination
 *@src: Source
+*@n: Cause and effect
 *
+*Return: A pointer to the resulting string dest
 */
 char *_strncat(char *dest, char *src, int n)
 {
