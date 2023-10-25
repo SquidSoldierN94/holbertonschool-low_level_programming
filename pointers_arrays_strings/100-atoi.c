@@ -3,9 +3,9 @@
 *_atoi - String to integer
 *@s: Defo gonna be useful
 *
-*
+*Return: A integer
 **/
-int _atoi(char *s);
+int _atoi(char *s)
 {
 int c = 0;
 unsigned int ni = 0;
