@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 /**
 *_strcpy - Copies a string to a buffer i think
 *@src - the source of the string
@@ -11,8 +10,8 @@ char *_strcpy(char *dest, char *src)
 int deez;
 for (deez = 0; deez < 1; deez++)
 {
-memset (dest, 0, sizeof dest);
-strncpy (dest, src, sizeof dest -1);
+dest[deez] = src[deez];
 }
-return (0);
+dest[i++] = '\0';
+return (dest);
 }
