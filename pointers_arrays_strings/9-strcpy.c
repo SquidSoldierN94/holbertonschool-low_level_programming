@@ -6,7 +6,7 @@
 *@dest - where the string is copied
 *
 */
-char *_strcpy(char *dest, char *src);
+char *_strcpy(char *dest, char *src)
 {
 memset (dest, 0, sizeof dest);
 strncpy (dest, src, sizeof dest -1);
