@@ -8,8 +8,8 @@
 */
 char *_strcpy(char *dest, char *src)
 {
-memset (dest, 0, sizeof dest);
-strncpy (dest, src, sizeof dest -1);
+memset (*dest, 0, sizeof *dest);
+strncpy (*dest, *src, sizeof *dest -1);
 }
 {
 return (0);
