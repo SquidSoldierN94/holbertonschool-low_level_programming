@@ -3,19 +3,27 @@
 *_strncpy - Does some stuff idk
 *@dest: Destination
 *@src: Source
+*@n: STOP
 *
-*Return: SUCCESS
+*Return: char value
 */
 char *_strncpy(char *dest, char *src, int n)
 {
-int i;
-for (i = 0; i < n && src[i] != '\0'; i++)
+int a = 0, b = 0;
+
+while (src[b])
 {
-dest[i] = src[i];
+b++;
 }
-for (; i < n; i++)
+while (a < n && src[a])
 {
-dest[i] = '\0';
+dest[a] = src[a];
+a++;
+}
+while (a < n)
+{
+dest[a] = '\0';
+a++;
 }
 {
 return (0);
