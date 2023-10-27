@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
 *trcmp - Compares two strings
 *@s1: The first string
@@ -41,4 +40,4 @@ break;
 c++;
 }
 return (r);
-}~s
+}
