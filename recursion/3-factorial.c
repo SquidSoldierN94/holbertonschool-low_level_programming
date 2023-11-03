@@ -1,6 +1,7 @@
 #include "main.h"
 /**
 *_factorial - Deez nuts
+*@n: If you want a description so damn bad
 *
 *Return: Nothing
 */
