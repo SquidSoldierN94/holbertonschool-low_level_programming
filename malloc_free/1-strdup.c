@@ -1,34 +1,29 @@
 #include "main.h"
 #include <stdlib.h>
 /**
-*_strdup - Does what it says lmao
-*@str: String dat shit
+*_strdup - Duplicate a string
+*@str: the string to duplicate
 *
-*
-*Return: Stuff idk
+*Return: the string duplicated
 */
-char *_strdup(char *str)
+char*_strdup(char *str)
 {
-char *s;
 int a = 0, i = 1;
-
+char *s;
 if (str == NULL)
 return (NULL);
-
 while (str[i])
 {
 i++;
 }
-
-s = malloc((sizeof(char) * 1) + 1);
+s = malloc((sizeof(char) * i) + 1);
 if (s == NULL)
 return (NULL);
-
-while (a < 1)
+while (a < i)
 {
 s[a] = str[a];
 a++;
 }
- s[a] = '\0';
+s[a] = '\0';
 return (s);
 }
