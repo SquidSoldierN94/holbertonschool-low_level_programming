@@ -19,7 +19,7 @@ int main(void)
         {
             putchar(variable1 + '0');
             putchar(',');
-            putchar(' ')
+            putchar(' ');
             putchar(variable2 + '0');
         }
     }
