@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <inttypes.h>
 /*
  *main - entry point
  * 
@@ -7,11 +6,11 @@
 */
 int main(void)
 {
-    printf("Size of char: %" PRIu32 " bytes\n", (uint32_t)sizeof(char));
-    printf("Size of int: %" PRIu32 " bytes\n", (uint32_t)sizeof(int));
-    printf("Size of long int: %" PRIu32 " bytes\n", (uint32_t)sizeof(long int));
-    printf("Size of long long int: %" PRIu32 " bytes\n", (uint32_t)sizeof(long long int));
-    printf("Size of float: %" PRIu32 " bytes\n", (uint32_t)sizeof(float));
+printf("Size of a char: 1 byte(s)\n");
+    printf("Size of an int: 4 byte(s)\n");
+    printf("Size of a long int: 4 byte(s)\n");
+    printf("Size of a long long int: 8 byte(s)\n");
+    printf("Size of a float: 4 byte(s)\n");
     
     return 0;
 }
