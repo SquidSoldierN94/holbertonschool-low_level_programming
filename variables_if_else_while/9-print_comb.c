@@ -10,14 +10,17 @@
  */
 int main(void)
 {
-int maggot=0;
+int maggot;
 
-    for (;maggot < 10; maggot++)
+    for (maggot = 1; maggot <= 9; maggot++)
     {
         {
-            putchar(maggot);
+            putchar(maggot + '0');
+            if (maggot < 9)
+            {
             putchar(',');
             putchar(' ');
+            }
         }
     }
 
