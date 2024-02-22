@@ -10,12 +10,12 @@
  */
 int main(void)
 {
-int maggot=0 
+int maggot=0;
 
     for (;maggot < 10; maggot++)
     {
         {
-            putchar(maggot)
+            putchar(maggot);
             putchar(',');
             putchar(' ');
         }
