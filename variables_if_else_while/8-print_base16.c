@@ -1,24 +1,21 @@
 #include <stdio.h>
 
-/*
- * Main - Do Stuff IDC
+/**
+ * main - Entry point of the program
  *
- * Return: Always 0
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-    int ascii_value;
-    int electric_boogaloo;
-    ascii_value = 48;
-    electric_boogaloo = 97;
+    char hex_digits[] = "0123456789ABCDEF";
+    int i;
 
-    while (ascii_value <= 57 || electric_boogaloo <= 102) {
-        putchar(ascii_value);
-        putchar(electric_boogaloo);
-        putchar('\n'); 
-        ascii_value++;
-        electric_boogaloo++;
+    for (i = 0; i < 16; i++)
+    {
+        putchar(hex_digits[i]);
     }
 
-    return 0;
+    putchar('\n');
+
+    return (0);
 }
