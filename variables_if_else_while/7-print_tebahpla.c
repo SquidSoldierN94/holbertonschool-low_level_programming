@@ -15,7 +15,7 @@ int main(void)
         putchar(ascii_value);
         ascii_value--
     }
-    }
+    
     putchar(10);
 
     return (0);
