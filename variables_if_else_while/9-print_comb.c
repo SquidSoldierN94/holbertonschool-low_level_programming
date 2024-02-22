@@ -12,7 +12,7 @@ int main(void)
 {
 int maggot;
 
-    for (maggot = 1; maggot <= 9; maggot++)
+    for (maggot = 0; maggot <= 9; maggot++)
     {
         {
             putchar(maggot + '0');
