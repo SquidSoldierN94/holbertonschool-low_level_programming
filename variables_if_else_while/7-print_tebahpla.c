@@ -13,7 +13,7 @@ int main(void)
     while (ascii_value >= 97)
     {
         putchar(ascii_value);
-        ascii_value--
+        ascii_value--;
     }
     
     putchar(10);
