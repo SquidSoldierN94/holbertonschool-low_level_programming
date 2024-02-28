@@ -5,24 +5,24 @@
  *
  * Return: Always 0
  */
-void print_line(int n)
+void print_diagonal(int n)
 {
-    char *line[4];
+	int len, space;
 
-    line[0] = "$";
-    line[1] = "__$";
-    line[2] = "__________$";
-    line[3] = "$";
+	if (n > 0)
+	{
+		for (len = 0; len < n; len++)
+		{
+			for (space = 0; space < len; space++)
+				_putchar(' ');
+			_putchar('\\');
 
-    for (int i = 0; i < 4; i++)
-    {
-        char *current_line = line[i];
+			if (len == n - 1)
+				continue;
 
-        for (int j = 0; current_line[j] != '\0'; j++)
-        {
-            _putchar(current_line[j]);
-        }
+			_putchar('\n');
+		}
+	}
 
-        _putchar('\n');
-    }
+	_putchar('\n');
 }

@@ -7,31 +7,24 @@
  */
 void print_line(int n)
 {
-    char *line[12];
+	int hash, index;
 
-    line[0] = " #";
-    line[1] = "##";
-    line[2] = "         #";
-    line[3] = "        ##";
-    line[4] = "       ###";
-    line[5] = "      ####";
-    line[6] = "     #####";
-    line[7] = "    ######";
-    line[8] = "   #######";
-    line[9] = "  ########";
-    line[10] = " ##########";
-    line[11] = "# ";
+	if (size > 0)
+	{
+		for (hash = 1; hash <= size; hash++)
+		{
+			for (index = size - hash; index > 0; index--)
+				_putchar(' ');
 
-    for (int i = 0; i < 12; i++)
-    {
-        char *current_line = line[i];
+			for (index = 0; index < hash; index++)
+				_putchar('#');
 
-        for (int j = 0; current_line[j] != '\0'; j++)
-        {
-            _putchar(current_line[j]);
-        }
+			if (hash == size)
+				continue;
 
-        _putchar('\n');
-    }
-    _putchar('\n');
+			_putchar('\n');
+		}
+	}
+
+	_putchar('\n');
 }

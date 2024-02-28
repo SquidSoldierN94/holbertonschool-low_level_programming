@@ -7,33 +7,20 @@
  */
 void print_line(int n)
 {
-    char *line[14];
+	int hgt, wid;
 
-    line[0] = "##";
-    line[1] = "##";
-    line[2] = "##########";
-    line[3] = "##########";
-    line[4] = "##########";
-    line[5] = "##########";
-    line[6] = "##########";
-    line[7] = "##########";
-    line[8] = "##########";
-    line[9] = "##########";
-    line[10] = "##########";
-    line[11] = "##########";
-    line[12] = "##########";
-    line[13] = "##########";
+	if (size > 0)
+	{
+		for (hgt = 0; hgt < size; hgt++)
+		{
+			for (wid = 0; wid < size; wid++)
+				_putchar('#');
 
-    for (int i = 0; i < 14; i++)
-    {
-        char *current_line = line[i];
+			if (hgt == size - 1)
+				continue;
+			_putchar('\n');
+		}
+	}
 
-        for (int j = 0; current_line[j] != '\0'; j++)
-        {
-            _putchar(current_line[j]);
-        }
-
-        _putchar('\n');
-    }
-    _putchar('\n')
+	_putchar('\n');
 }
