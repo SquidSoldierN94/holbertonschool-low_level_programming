@@ -5,7 +5,7 @@
  *
  * Return: Always 0
  */
-void print_line(int n)
+void print_square(int size)
 {
 	int hgt, wid;
 

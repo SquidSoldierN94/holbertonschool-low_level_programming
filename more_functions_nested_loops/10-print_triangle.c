@@ -9,17 +9,17 @@ void print_line(int n)
 {
 	int hash, index;
 
-	if (size > 0)
+	if (n > 0)
 	{
-		for (hash = 1; hash <= size; hash++)
+		for (hash = 1; hash <= n; hash++)
 		{
-			for (index = size - hash; index > 0; index--)
+			for (index = n - hash; index > 0; index--)
 				_putchar(' ');
 
 			for (index = 0; index < hash; index++)
 				_putchar('#');
 
-			if (hash == size)
+			if (hash == n)
 				continue;
 
 			_putchar('\n');
