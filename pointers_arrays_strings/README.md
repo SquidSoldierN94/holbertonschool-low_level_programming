@@ -1,0 +1,1 @@
+the emperor's light is my shield
