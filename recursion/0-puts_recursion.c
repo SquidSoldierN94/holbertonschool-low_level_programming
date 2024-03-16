@@ -1,19 +1,17 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
- * main - prints the content of *s
- * 
- * 
- * return - always 0
- * 
-*/
+ * _puts_recursion - prints a string recursively
+ * @s: the string to print
+ */
 void _puts_recursion(char *s)
 {
-if (*s == "\0")
-{
-    return;
-}
-printf("%c", *s);
-
-_puts_recursion(s + 1);
+    if (*s == '\0')
+    {
+        _putchar('\n');
+        return;
+    }
+    _putchar(*s);
+    _puts_recursion(s + 1);
 }
