@@ -20,8 +20,13 @@ int main(int argc, char *argv[])
 
     result = op_func(num1, num2);
 
-    if (result < 0 || result / 10)
-        _putchar(result / 10 + '0');
+    if (result < 0)
+    {
+        _putchar('-');
+        result *= -1;
+    }
+
+    _putchar(result / 10 + '0');
     _putchar(result % 10 + '0');
     _putchar('\n');
 
