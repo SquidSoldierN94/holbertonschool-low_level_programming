@@ -1,4 +1,6 @@
+#include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include "3-calc.h"
 
 /**
@@ -26,7 +28,7 @@ int main(int argc, char *argv[])
 
     if (argc != 4)
     {
-        for (char *error = "Error\n"; *error != '\0'; error++)
+        for (const char *error = "Error\n"; *error != '\0'; error++)
             _putchar(*error);
         return (98);
     }
@@ -36,15 +38,11 @@ int main(int argc, char *argv[])
     op_func = get_op_func(argv[2]);
 
     if (!op_func)
-    {
-        for (char *error = "Error\n"; *error != '\0'; error++)
-            _putchar(*error);
         return (99);
-    }
 
     if ((*argv[2] == '/' || *argv[2] == '%') && num2 == 0)
     {
-        for (char *error = "Error\n"; *error != '\0'; error++)
+        for (const char *error = "Error\n"; *error != '\0'; error++)
             _putchar(*error);
         return (100);
     }
@@ -53,9 +51,8 @@ int main(int argc, char *argv[])
 
     char result_str[12];
     sprintf(result_str, "%d\n", result);
-
-    for (int i = 0; result_str[i] != '\0'; i++)
-        _putchar(result_str[i]);
+    for (char *c = result_str; *c != '\0'; c++)
+        _putchar(*c);
 
     return (0);
 }
