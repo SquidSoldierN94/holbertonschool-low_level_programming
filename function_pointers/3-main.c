@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include "3-calc.h"
 
+int _putchar(char c);
+
 int main(int argc, char *argv[])
 {
     int num1, num2, result;
@@ -21,7 +23,7 @@ int main(int argc, char *argv[])
     num2 = atoi(argv[3]);
     op_func = get_op_func(argv[2]);
 
-    if (op_func == NULL)
+    if (!op_func || (*argv[2] == '/' && num2 == 0))
     {
         char *error = "Error\n";
         while (*error)
@@ -29,18 +31,7 @@ int main(int argc, char *argv[])
             _putchar(*error);
             error++;
         }
-        return (99);
-    }
-
-    if ((*argv[2] == '/' || *argv[2] == '%') && num2 == 0)
-    {
-        char *error = "Error\n";
-        while (*error)
-        {
-            _putchar(*error);
-            error++;
-        }
-        return (100);
+        return (!op_func ? 99 : 100);
     }
 
     result = op_func(num1, num2);
@@ -49,4 +40,9 @@ int main(int argc, char *argv[])
     _putchar('\n');
 
     return (0);
+}
+
+int _putchar(char c)
+{
+    return c;
 }
