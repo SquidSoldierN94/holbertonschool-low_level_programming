@@ -3,24 +3,8 @@
 #include <unistd.h>
 #include "3-calc.h"
 
-/**
- * _putchar - Writes a character to stdout
- * @c: The character to print
- *
- * Return: On success 1, on error -1
- */
-int _putchar(char c)
-{
-    return write(1, &c, 1);
-}
+int _putchar(char c);
 
-/**
- * main - Entry point
- * @argc: Argument count
- * @argv: Argument vector
- *
- * Return: 0 on success, 98, 99, or 100 on failure
- */
 int main(int argc, char *argv[])
 {
     int num1, num2, result;
@@ -28,8 +12,11 @@ int main(int argc, char *argv[])
 
     if (argc != 4)
     {
-        for (const char *error = "Error\n"; *error != '\0'; error++)
+        const char *error = "Error\n";
+        while (*error != '\0') {
             _putchar(*error);
+            error++;
+        }
         return (98);
     }
 
@@ -42,17 +29,22 @@ int main(int argc, char *argv[])
 
     if ((*argv[2] == '/' || *argv[2] == '%') && num2 == 0)
     {
-        for (const char *error = "Error\n"; *error != '\0'; error++)
+        const char *error = "Error\n";
+        while (*error != '\0') {
             _putchar(*error);
+            error++;
+        }
         return (100);
     }
 
     result = op_func(num1, num2);
 
-    char result_str[12];
-    sprintf(result_str, "%d\n", result);
-    for (char *c = result_str; *c != '\0'; c++)
-        _putchar(*c);
+    printf("%d\n", result);
 
     return (0);
+}
+
+int _putchar(char c)
+{
+    return write(1, &c, 1);
 }
