@@ -1,6 +1,6 @@
+// 3-main.c
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 #include "3-calc.h"
 
 int _putchar(char c);
@@ -13,7 +13,8 @@ int main(int argc, char *argv[])
     if (argc != 4)
     {
         const char *error = "Error\n";
-        while (*error != '\0') {
+        while (*error != '\0')
+        {
             _putchar(*error);
             error++;
         }
@@ -25,12 +26,21 @@ int main(int argc, char *argv[])
     op_func = get_op_func(argv[2]);
 
     if (!op_func)
+    {
+        const char *error = "Error\n";
+        while (*error != '\0')
+        {
+            _putchar(*error);
+            error++;
+        }
         return (99);
+    }
 
     if ((*argv[2] == '/' || *argv[2] == '%') && num2 == 0)
     {
         const char *error = "Error\n";
-        while (*error != '\0') {
+        while (*error != '\0')
+        {
             _putchar(*error);
             error++;
         }
@@ -46,5 +56,6 @@ int main(int argc, char *argv[])
 
 int _putchar(char c)
 {
-    return write(1, &c, 1);
+    putchar(c);
+    return 0;
 }
