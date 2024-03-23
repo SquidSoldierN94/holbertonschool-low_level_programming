@@ -7,6 +7,8 @@ int main(int argc, char *argv[])
 {
     int num1, num2, result;
     int (*op_func)(int, int);
+    int temp;
+    int digits;
 
     if (argc != 4)
     {
@@ -44,18 +46,19 @@ int main(int argc, char *argv[])
         result *= -1;
     }
 
-    /* Convert result to string and print each digit */
-    int temp = result;
-    int digits = 0;
+    temp = result;
+    digits = 0;
     while (temp > 0)
     {
         temp /= 10;
         digits++;
     }
 
-    char buffer[digits + 1];
-    buffer[digits] = '\0';
+    char *buffer = malloc(digits + 1);
+    if (buffer == NULL)
+        return (1);
 
+    buffer[digits] = '\0';
     while (digits--)
     {
         buffer[digits] = result % 10 + '0';
@@ -67,6 +70,8 @@ int main(int argc, char *argv[])
         _putchar(*ptr++);
 
     _putchar('\n');
+
+    free(buffer);
 
     return (0);
 }
