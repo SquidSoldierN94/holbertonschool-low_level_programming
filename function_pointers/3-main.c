@@ -11,11 +11,8 @@ int main(int argc, char *argv[])
     if (argc != 4)
     {
         const char *error = "Error\n";
-        while (*error != '\0')
-        {
-            _putchar(*error);
-            error++;
-        }
+        while (*error)
+            _putchar(*error++);
         return (98);
     }
 
@@ -26,36 +23,49 @@ int main(int argc, char *argv[])
     if (!op_func)
     {
         const char *error = "Error\n";
-        while (*error != '\0')
-        {
-            _putchar(*error);
-            error++;
-        }
+        while (*error)
+            _putchar(*error++);
         return (99);
     }
 
     if ((*argv[2] == '/' || *argv[2] == '%') && num2 == 0)
     {
         const char *error = "Error\n";
-        while (*error != '\0')
-        {
-            _putchar(*error);
-            error++;
-        }
+        while (*error)
+            _putchar(*error++);
         return (100);
     }
 
     result = op_func(num1, num2);
 
-    /* Printing the result */
     if (result < 0)
     {
         _putchar('-');
         result *= -1;
     }
-    if (result / 10)
-        main(result / 10 + '0');
-    _putchar(result % 10 + '0');
+
+    /* Convert result to string and print each digit */
+    int temp = result;
+    int digits = 0;
+    while (temp > 0)
+    {
+        temp /= 10;
+        digits++;
+    }
+
+    char buffer[digits + 1];
+    buffer[digits] = '\0';
+
+    while (digits--)
+    {
+        buffer[digits] = result % 10 + '0';
+        result /= 10;
+    }
+
+    const char *ptr = buffer;
+    while (*ptr)
+        _putchar(*ptr++);
+
     _putchar('\n');
 
     return (0);
