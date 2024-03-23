@@ -1,4 +1,4 @@
-#include <stddef.h> // Include for NULL definition
+#include <stddef.h>
 
 #include "function_pointers.h"
 

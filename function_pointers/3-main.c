@@ -1,4 +1,6 @@
-#include <stdlib.h>
+// 3-main.c
+#include <stdlib.h> // Include <stdlib.h> for exit function
+#include <unistd.h> // Include <unistd.h> for write function
 #include "3-calc.h"
 
 /**
