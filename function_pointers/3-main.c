@@ -9,6 +9,8 @@ int main(int argc, char *argv[])
     int (*op_func)(int, int);
     int temp;
     int digits;
+    char *buffer;
+    const char *ptr;
 
     if (argc != 4)
     {
@@ -54,7 +56,7 @@ int main(int argc, char *argv[])
         digits++;
     }
 
-    char *buffer = malloc(digits + 1);
+    buffer = malloc(digits + 1);
     if (buffer == NULL)
         return (1);
 
@@ -65,7 +67,7 @@ int main(int argc, char *argv[])
         result /= 10;
     }
 
-    const char *ptr = buffer;
+    ptr = buffer;
     while (*ptr)
         _putchar(*ptr++);
 
