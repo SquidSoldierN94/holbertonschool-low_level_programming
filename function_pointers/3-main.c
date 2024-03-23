@@ -1,6 +1,4 @@
-// 3-main.c
-#include <stdlib.h> // Include <stdlib.h> for exit function
-#include <unistd.h> // Include <unistd.h> for write function
+#include <stdlib.h>
 #include "3-calc.h"
 
 /**
@@ -38,7 +36,11 @@ int main(int argc, char *argv[])
     op_func = get_op_func(argv[2]);
 
     if (!op_func)
+    {
+        for (char *error = "Error\n"; *error != '\0'; error++)
+            _putchar(*error);
         return (99);
+    }
 
     if ((*argv[2] == '/' || *argv[2] == '%') && num2 == 0)
     {
@@ -49,8 +51,11 @@ int main(int argc, char *argv[])
 
     result = op_func(num1, num2);
 
-    for (char *c = itoa(result); *c != '\0'; c++)
-        _putchar(*c);
+    char result_str[12];
+    sprintf(result_str, "%d\n", result);
+
+    for (int i = 0; result_str[i] != '\0'; i++)
+        _putchar(result_str[i]);
 
     return (0);
 }
