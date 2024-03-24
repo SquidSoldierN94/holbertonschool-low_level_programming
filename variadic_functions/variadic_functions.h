@@ -5,6 +5,13 @@
 #include <stddef.h>
 #include <string.h>
 
+typedef struct printer
+{
+	char *symbol;
+	void (*print)(va_list arg);
+
+} printer_t;
+
 int _putchar(char c);
 void print_alphabet(void);
 void print_alphabet_x10(void);
