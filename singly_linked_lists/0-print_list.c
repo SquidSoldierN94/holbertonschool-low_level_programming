@@ -41,8 +41,14 @@ size_t print_list(const list_t *h)
             }
 
             _putchar(' ');
-            for (size_t i = 0; h->str[i] != '\0'; i++)
+
+            size_t i = 0;
+            while (h->str[i] != '\0')
+            {
                 _putchar(h->str[i]);
+                i++;
+            }
+
             _putchar('\n');
         }
         count++;
