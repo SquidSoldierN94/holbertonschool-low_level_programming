@@ -12,6 +12,8 @@ size_t print_list(const list_t *h)
 
     while (h != NULL)
     {
+        size_t i = 0;
+
         if (h->str == NULL)
         {
             _putchar('[');
@@ -42,7 +44,6 @@ size_t print_list(const list_t *h)
 
             _putchar(' ');
 
-            size_t i = 0;
             while (h->str[i] != '\0')
             {
                 _putchar(h->str[i]);
