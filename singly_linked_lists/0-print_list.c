@@ -28,16 +28,12 @@ size_t print_list(const list_t *h)
         else
         {
             size_t len = h->len;
-            size_t temp = len;
             size_t divisor = 1;
 
-            while (temp > 9)
-            {
-                temp /= 10;
+            while (len / divisor >= 10)
                 divisor *= 10;
-            }
 
-            while (divisor >= 1)
+            while (divisor != 0)
             {
                 _putchar((len / divisor) + '0');
                 len %= divisor;
@@ -45,7 +41,8 @@ size_t print_list(const list_t *h)
             }
 
             _putchar(' ');
-            _puts(h->str);
+            for (size_t i = 0; h->str[i] != '\0'; i++)
+                _putchar(h->str[i]);
             _putchar('\n');
         }
         count++;
