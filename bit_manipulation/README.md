@@ -1,0 +1,1 @@
+I am Rogal Dorn, defiant and unyeilding
